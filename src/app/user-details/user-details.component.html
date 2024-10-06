@@ -1,0 +1,18 @@
+<div class="details-container">
+    <h2>View User Details</h2>
+    <form>
+      <label for="searchPhone">Phone</label>
+      <input type="text" id="searchPhone" [(ngModel)]="searchPhone">
+      <button type="button" (click)="search()">Search</button>
+    </form>
+  
+    <!-- Display user details after search -->
+    <div *ngIf="foundUser">
+      <p><strong>Name:</strong> {{ foundUser.name }}</p>
+      <p><strong>Phone:</strong> {{ foundUser.phone }}</p>
+      <p><strong>Email:</strong> {{ foundUser.email }}</p>
+    </div>
+  
+    <button type="button" (click)="goToLogin()">GOTO LOGIN</button>
+  </div>
+  

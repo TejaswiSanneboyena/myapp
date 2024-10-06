@@ -1,0 +1,8 @@
+<!-- Toggle between login and user details component based on showLogin -->
+<div *ngIf="showLogin">
+  <app-login (userSubmitted)="onUserSubmitted($event)"></app-login>
+</div>
+
+<div *ngIf="!showLogin">
+  <app-user-details [user]="user" (goToLoginPage)="goToLoginPage()"></app-user-details>
+</div>
